@@ -7,7 +7,9 @@
     "start": "npx -p ../ icons-bundler",
     "args": "npx -p ../ icons-bundler ./other/icons.json src/icons.ts"
   },
-  "dependencies": {},
+  "dependencies": {
+    "icons-bundler": "^1.0.0-alpha.0"
+  },
   "alias": {},
   "devDependencies": {
     "typescript": "^3.4.5"

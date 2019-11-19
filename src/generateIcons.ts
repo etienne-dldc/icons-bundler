@@ -22,8 +22,7 @@ export const generateIcons = async (options: Options = {}) => {
   saveFile(
     outputPath,
     [
-      `export type Part = string | ['rect', [number, number, number, number, number, number]]`,
-      `export type Parts = Array<Part>;`,
+      `import { Parts } from 'icons-bundler';`,
       ``,
       `// prettier-ignore`,
       'export const ICONS_PATHS =  {',
