@@ -1,0 +1,15 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx -p ../ icons-bundler",
+    "args": "npx -p ../ icons-bundler ./other/icons.json src/icons.ts"
+  },
+  "dependencies": {},
+  "alias": {},
+  "devDependencies": {
+    "typescript": "^3.4.5"
+  }
+}

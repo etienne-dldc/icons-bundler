@@ -1,0 +1,68 @@
+{
+  "name": "icons-bundler",
+  "version": "1.0.0-alpha.0",
+  "license": "MIT",
+  "author": "Etienne Dldc",
+  "main": "dist/index.js",
+  "module": "dist/icons-bundler.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "bin": {
+    "icons-bundler": "./bin/icons-bundler.js"
+  },
+  "scripts": {
+    "start": "tsdx watch --target node",
+    "build": "tsdx build --target node",
+    "test": "tsdx test --env=jsdom",
+    "lint": "tsdx lint",
+    "pub": "np"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.0.1",
+    "@types/jest": "^24.0.22",
+    "@types/prettier": "^1.18.3",
+    "@types/svgo": "^1.3.0",
+    "husky": "^3.0.9",
+    "np": "^5.1.3",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "tsdx": "^0.11.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.9",
+    "fs-extra": "^8.1.0",
+    "prettier": "^1.19.1",
+    "svgo": "^1.3.2",
+    "svgson": "^4.0.0"
+  },
+  "description": "",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etienne-dldc/icons-bundler.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/etienne-dldc/icons-bundler/issues"
+  },
+  "homepage": "https://github.com/etienne-dldc/icons-bundler#readme"
+}
