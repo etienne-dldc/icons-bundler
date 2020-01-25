@@ -30,7 +30,7 @@
   "scripts": {
     "build": "tsdx build --target node",
     "lint": "tsdx lint",
-    "pub": "np",
+    "pub": "yarn build && np",
     "start": "tsdx watch --target node",
     "test": "tsdx test --env=jsdom"
   },
