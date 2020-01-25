@@ -25,7 +25,7 @@ export const generateIcons = async (options: Options = {}) => {
       `import { Parts } from 'icons-bundler';`,
       ``,
       `// prettier-ignore`,
-      'export const ICONS_PATHS =  {',
+      'export const ICONS_PATHS = {',
       await buildPathsObject(iconData, iconsJsonFolderPath),
       '};',
       '',
