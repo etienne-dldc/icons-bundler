@@ -61,7 +61,7 @@ async function buildPathsObject(
         .optimize(svg, { path: iconPath })
         .then(async ({ data }) => {
           const ast = await svgson(data);
-          const elems = ast.children.map(child => {
+          const elems = ast.children.map((child) => {
             if (child.children.length > 0) {
               throw new Error(
                 `Unsuported children in ${iconName} > ${child.name}`
@@ -72,10 +72,15 @@ async function buildPathsObject(
             }
             if (child.name === 'rect') {
               const a = child.attributes;
-              const params = [a.x, a.y, a.width, a.height, a.rx, a.ry].map(v =>
-                parseFloat(v)
-              );
-              params.forEach(v => {
+              const params = [
+                a.x,
+                a.y,
+                a.width,
+                a.height,
+                a.rx,
+                a.ry,
+              ].map((v) => parseFloat(v));
+              params.forEach((v) => {
                 if (Number.isNaN(v)) {
                   throw new Error(`Invalid rect params !`);
                 }
@@ -90,5 +95,5 @@ async function buildPathsObject(
       return `  "${iconName}": ${JSON.stringify(parts)} as Parts,`;
     }
   );
-  return Promise.all(all).then(all => all.join('\n'));
+  return Promise.all(all).then((all) => all.join('\n'));
 }
